@@ -223,7 +223,7 @@ td:last-child table td {
   border: none !important;
   background: transparent !important;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 td:last-child table td img {
