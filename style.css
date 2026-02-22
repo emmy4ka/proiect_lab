@@ -228,12 +228,18 @@ td:last-child table td {
 
 td:last-child table td img {
   width: 150px;
-  height: 130px;
+  height: 150px;
   object-fit: cover;
   padding: 0;
-  border: 2px solid #d5cbb8;
-  filter: saturate(85%);
-  transition: all 0.4s ease;
+  border: none;
+  filter: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  vertical-align: middle;
+}
+
+td:last-child table td img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(80,100,60,0.18);
 }
 
 td:last-child table td img:hover {
