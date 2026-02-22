@@ -230,11 +230,10 @@ td:last-child table td img {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  padding: 0;
-  border: none;
-  filter: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  vertical-align: middle;
+  border-radius: 8px;
+  border: 2px solid #d5cbb8;
+  display: block;
+  margin: 0 auto;
 }
 
 td:last-child table td img:hover {
