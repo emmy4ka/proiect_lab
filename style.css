@@ -219,11 +219,11 @@ td:last-child table {
 }
 
 td:last-child table td {
-  padding: 0 12px !important;
+  padding: 0 20px !important;
   border: none !important;
   background: transparent !important;
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 td:last-child table td img {
