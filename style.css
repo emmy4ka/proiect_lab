@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap');
+
+/* ── BAZA ── */
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f4ef;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #3a3228;
+}
+
+/* ── TABELUL PRINCIPAL ── */
+table {
+  border-collapse: collapse;
+  border: none !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  background: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+table td {
+  border: none !important;
+}
+
+/* ── HEADER ── */
+tr:first-child td {
+  background: #1c1610;
+  color: #f5efe6;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+tr:first-child td h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #c9a96e;
+  margin: 12px 0 0;
+  text-transform: uppercase;
+}
+
+tr:first-child td img {
+  border-radius: 50%;
+  border: 2px solid #c9a96e;
+  padding: 6px;
+  filter: brightness(1.1);
+}
+
+/* ── MENIU ── */
+td:first-child {
+  background: #2a2118;
+  padding: 32px 0 !important;
+  vertical-align: top;
+}
+
+td:first-child h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #c9a96e;
+  padding: 0 28px 20px;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,169,110,0.25);
+  margin-bottom: 8px;
+}
+
+td:first-child p {
+  margin: 0;
+}
+
+td:first-child a {
+  display: block;
+  padding: 11px 28px;
+  color: #b0a090;
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.25s;
+  border-left: 2px solid transparent;
+}
+
+td:first-child a:hover {
+  color: #c9a96e;
+  background: rgba(201,169,110,0.07);
+  border-left-color: #c9a96e;
+  padding-left: 34px;
+}
+
+/* ── CONȚINUT ── */
+td:last-child {
+  padding: 40px 48px !important;
+  vertical-align: top;
+  background: #fff;
+}
+
+td:last-child h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #1c1610;
+  margin-bottom: 6px;
+}
+
+td:last-child > p:first-of-type {
+  color: #9a8878;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 36px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ede5d5;
+}
+
+td:last-child h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #2a1f14;
+  margin: 32px 0 6px;
+}
+
+td:last-child img {
+  border: 1px solid #ede5d5;
+  padding: 12px;
+  background: #faf7f2;
+  display: block;
+  margin: 8px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+td:last-child img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+td:last-child > p {
+  color: #7a6a5a;
+  font-size: 0.83rem;
+  letter-spacing: 0.04em;
+  margin: 4px 0;
+}
+
+/* Link înapoi */
+td:last-child > a {
+  display: inline-block;
+  margin-top: 24px;
+  color: #9a7a50;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #d4b896;
+  padding-bottom: 2px;
+  transition: color 0.25s;
+}
+
+td:last-child > a:hover {
+  color: #c9a96e;
+}
+
+/* ── FOOTER ── */
+tr:last-child td {
+  background: #1c1610 !important;
+  color: #7a6a5a !important;
+  padding: 36px 20px !important;
+  text-align: center;
+  border-top: 1px solid rgba(201,169,110,0.2) !important;
+}
+
+tr:last-child td h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #c9a96e;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+
+tr:last-child td p {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  line-height: 2;
+  color: #7a6a5a;
+  margin: 0;
+}
+
+/* ── NAVIGARE RAPIDĂ (index) ── */
+td:last-child table {
+  box-shadow: none !important;
+  background: transparent !important;
+  margin: 0 !important;
+}
+
+td:last-child table td {
+  padding: 0 16px !important;
+  border: none !important;
+  background: transparent !important;
+  text-align: center;
+}
+
+td:last-child table td img {
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  padding: 0;
+  border-radius: 0;
+  filter: grayscale(20%);
+  transition: filter 0.4s, transform 0.3s, box-shadow 0.3s;
+}
+
+td:last-child table td img:hover {
+  filter: grayscale(0%);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+td:last-child table td p {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #5a4a3a;
+  margin-top: 10px;
+  border: none;
+}
