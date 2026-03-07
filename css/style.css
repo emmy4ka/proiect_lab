@@ -174,7 +174,7 @@ img[src*="all.png"] {
     color: white;
     font-size: 0.9rem;
 }
-.back-link {
+.btn-inapoi {
   display: inline-block;
   text-decoration: none;
   color: #4a6741;
@@ -186,6 +186,6 @@ img[src*="all.png"] {
   transition: opacity 0.2s;
 }
 
-.back-link:hover {
+.btn-inapoi:hover {
   opacity: 0.6;
 }
