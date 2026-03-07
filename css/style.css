@@ -127,7 +127,7 @@ p {
 
 /* FOOTER / CONTACT */
 tr:last-child td {
-  background: #3d3428;
+  background: #4a6741;
   color: #ede8df;
   padding: 40px;
   text-align: center;
@@ -173,4 +173,19 @@ img[src*="all.png"] {
 .nav-item b {
     color: white;
     font-size: 0.9rem;
+}
+.btn-inapoi {
+  display: inline-block;
+  text-decoration: none;
+  color: #4a6741;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  border-bottom: 1px solid #4a6741;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.btn-inapoi:hover {
+  opacity: 0.6;
 }
