@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Parfumuri damă</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        
+        <tr>
+            <td colspan="2" align="center">
+                <h1>Lumea Parfumurilor</h1>
+                <img src="../images/images.png" width="150">
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="25%" valign="top">
+                <h3>Meniu</h3>
+                <p><a href="../index.php">Acasă</a></p>
+                <p><a href="dama.php">Parfumuri damă</a></p>
+                <p><a href="barbati.php">Parfumuri bărbați</a></p>
+                <p><a href="contact.php">Parfumuri unisex</a></p>
+                <p><a href="branduri.php">Branduri</a></p>
+            </td>
+            
+            <td width="75%" valign="top">
+                <h2>Parfumuri pentru Femei</h2>
+                <p>Colecția noastră de parfumuri pentru dame.</p>
+                
+                <h3>Chanel No.5</h3>
+                <img src="../images/chanel5.jpeg" width="150">
+                <p>Parfum floral elegant și clasic</p>
+                
+                <h3>Dior J'adore</h3>
+                <img src="../images/jadoredior.jpeg" width="150">
+                <p>Note fructate și florale</p>
+                
+                <h3>Lancôme La Vie Est Belle</h3>
+                <img src="../images/3._la_vie_est_belle_3_1.jpg" width="150">
+                <p>Arome dulci și senzuale</p>
+                
+                <a href="../index.php" class="btn-inapoi">← Înapoi la pagina principală</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" align="center">
+                <h3>Contact</h3>
+                <p>Email: lumea.parfumurilor@gmail.com</p>
+                <p>Telefon: +373 000 000</p>
+                <p>Edineț, Moldova</p>
+            </td>
+        </tr>
+    </table>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
