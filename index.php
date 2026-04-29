@@ -6,33 +6,6 @@
     <title>Lumea Parfumurilor</title>
 </head>
 <body>
-<?php
-require_once 'db.php';
-
-$mesaj_trimis = false;
-$eroare = '';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nume  = htmlspecialchars(trim($_POST['nume'] ?? ''));
-    $email = htmlspecialchars(trim($_POST['email'] ?? ''));
-
-    if (empty($nume)) {
-        $eroare = '⚠️ Te rugăm să introduci numele tău.';
-    } elseif (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $eroare = '⚠️ Te rugăm să introduci un email valid.';
-    } else {
-        $stmt = mysqli_prepare($conn, "INSERT INTO abonati (nume, email) VALUES (?, ?)");
-        mysqli_stmt_bind_param($stmt, "ss", $nume, $email);
-
-        if (mysqli_stmt_execute($stmt)) {
-            $mesaj_trimis = true;
-        } else {
-            $eroare = '⚠️ A apărut o eroare. Încearcă din nou.';
-        }
-        mysqli_stmt_close($stmt);
-    }
-}
-?>
 
 <table border="1" width="100%">
 
@@ -77,31 +50,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>
 
-            <!-- FORMULAR ABONARE -->
+            <!-- FORMULAR ABONARE - trimis prin AJAX, fără reload -->
             <div class="abonare-box">
                 <h3>🌸 Fii primul care află când parfumul tău preferat revine în stoc!</h3>
                 <p>Lasă-ne datele tale și te anunțăm imediat.</p>
 
-                <?php if ($mesaj_trimis): ?>
-                    <p style="color:#4a6741; font-size:1rem; margin-top:12px;">
-                        ✅ Mulțumim, <strong><?= $nume ?></strong>! Te vom anunța pe <strong><?= $email ?></strong> când parfumurile preferate vor fi disponibile.
-                    </p>
-                <?php else: ?>
-                    <?php if ($eroare): ?>
-                        <p style="color:#c0392b; font-size:1rem; margin-top:12px;"><?= $eroare ?></p>
-                    <?php endif; ?>
-                    <form method="POST" action="index.php">
-                        <div class="form-grup">
-                            <input type="text" name="nume" placeholder="Numele tău"
-                                value="<?= htmlspecialchars($_POST['nume'] ?? '') ?>">
-                        </div>
-                        <div class="form-grup">
-                            <input type="email" name="email" placeholder="Email-ul tău"
-                                value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
-                        </div>
-                        <button type="submit">Abonează-mă</button>
-                    </form>
-                <?php endif; ?>
+                <form id="form-abonare">
+                    <div class="form-grup">
+                        <input type="text" name="nume" placeholder="Numele tău">
+                    </div>
+                    <div class="form-grup">
+                        <input type="email" name="email" placeholder="Email-ul tău">
+                    </div>
+                    <button type="submit">Abonează-mă</button>
+                </form>
+
+                <!-- Mesajul de răspuns apare aici prin JavaScript -->
+                <p id="mesaj-ajax" style="display:none;"></p>
             </div>
 
         </td>
