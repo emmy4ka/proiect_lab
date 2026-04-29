@@ -1,4 +1,4 @@
-// ============================================
+});// ============================================
 // 1. MENIU ACTIV - evidențiază pagina curentă
 // ============================================
 function setActiveMeniu() {
@@ -105,3 +105,59 @@ document.addEventListener('DOMContentLoaded', function () {
     initScrollAnimations();
     initFormular();
 });
+
+// ============================================
+// 3. FORMULAR ABONARE CU AJAX
+// ============================================
+function initFormular() {
+    const form = document.querySelector('.abonare-box form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // oprește reload-ul paginii!
+
+        const nume  = form.querySelector('input[name="nume"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const mesaj = document.getElementById('mesaj-ajax');
+
+        // Validare client-side
+        if (nume === '') {
+            afisezMesaj(mesaj, '⚠️ Te rugăm să introduci numele tău.', '#c0392b');
+            return;
+        }
+        if (!email.includes('@') || !email.includes('.')) {
+            afisezMesaj(mesaj, '⚠️ Te rugăm să introduci un email valid.', '#c0392b');
+            return;
+        }
+
+        // Trimitere AJAX
+        const formData = new FormData();
+        formData.append('nume', nume);
+        formData.append('email', email);
+
+        fetch('ajax_abonare.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.succes) {
+                afisezMesaj(mesaj, data.mesaj, '#4a6741');
+                form.reset(); // golește câmpurile
+            } else {
+                afisezMesaj(mesaj, data.mesaj, '#c0392b');
+            }
+        })
+        .catch(() => {
+            afisezMesaj(mesaj, '⚠️ Eroare de rețea. Încearcă din nou.', '#c0392b');
+        });
+    });
+}
+
+function afisezMesaj(el, text, culoare) {
+    el.innerHTML = text;
+    el.style.color = culoare;
+    el.style.display = 'block';
+    el.style.marginTop = '12px';
+    el.style.fontSize = '1rem';
+}
