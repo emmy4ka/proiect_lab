@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Branduri</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        
+        <tr>
+            <td colspan="2" align="center">
+                <h1>Lumea Parfumurilor</h1>
+                <img src="../images/images.png" width="150">
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="25%" valign="top">
+                <h3>Meniu</h3>
+               <p><a href="../index.php">Acasă</a></p>
+                <p><a href="../paginihtml/dama.php">Parfumuri damă</a></p>
+                <p><a href="../paginihtml/barbati.php">Parfumuri bărbați</a></p>
+                <p><a href="../paginihtml/contact.php">Parfumuri unisex</a></p>
+                <p><a href="../paginihtml/branduri.php">Branduri</a></p>
+            </td>
+            
+            <td width="75%" valign="top">
+                <h2>Branduri Celebre</h2>
+                <p>Cele mai prestigioase case de parfumuri din lume.</p>
+                
+                <h3>Chanel</h3>
+                <img src="../images/chanel_logo.jpg.png" width="150">
+                <p>Țara: Franța</p>
+                
+                <h3>Dior</h3>
+                <img src="../images/dior_logo.jpg.png" width="150">
+                <p>Țara: Franța</p>
+                
+                <h3>Lancôme</h3>
+                <img src="../images/lancome_logo.jpg" width="150">
+                <p>Țara: Franța</p>
+                
+                <a href="../index.php" class="btn-inapoi">← Înapoi la pagina principală</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" align="center">
+                <h3>Contact</h3>
+                <p>Email: lumea.parfumurilor@gmail.com</p>
+                <p>Telefon: +373 000 000</p>
+                <p>Edineț, Moldova</p>
+            </td>
+        </tr>
+    </table>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

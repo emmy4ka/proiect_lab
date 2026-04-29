@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Parfumuri bărbați</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        
+        <tr>
+            <td colspan="2" align="center">
+                <h1>Lumea Parfumurilor</h1>
+                <img src="../images/images.png" width="150">
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="25%" valign="top">
+                <h3>Meniu</h3>
+               <p><a href="../index.php">Acasă</a></p>
+                <p><a href="../paginihtml/dama.php">Parfumuri damă</a></p>
+                <p><a href="../paginihtml/barbati.php">Parfumuri bărbați</a></p>
+                <p><a href="../paginihtml/contact.php">Parfumuri unisex</a></p>
+                <p><a href="../paginihtml/branduri.php">Branduri</a></p>
+            </td>
+
+            <td width="75%" valign="top">
+                <h2>Parfumuri pentru Bărbați</h2>
+                <p>Colecția noastră de parfumuri pentru bărbați.</p>
+                
+                <h3>Dior Sauvage</h3>
+                <img src="../images/Dior Sauvage.jpeg" width="150">
+                <p>Parfum masculin și proaspăt</p>
+                
+                <h3>Bleu de Chanel</h3>
+                <img src="../images/Bleu de Chanel.jpeg" width="150">
+                <p>Arome lemnoase și aromatice</p>
+                
+                <h3>Giorgio Armani Acqua di Gio</h3>
+                <img src="../images/Acqua di Gio.jpeg" width="150">
+                <p>Fresh și acvatic</p>
+                
+                <a href="../index.php" class="btn-inapoi">← Înapoi la pagina principală</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" align="center">
+                <h3>Contact</h3>
+                <p>Email: lumea.parfumurilor@gmail.com</p>
+                <p>Telefon: +373 000 000</p>
+                <p>Edineț, Moldova</p>
+            </td>
+        </tr>
+    </table>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
